@@ -5,11 +5,7 @@ export const metadata = {
   description: "An App to help you memorize scripture",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-300">{children}</body>

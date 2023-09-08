@@ -1,13 +1,8 @@
 "use client";
 import { useState } from "react";
+import Button from "../Button/button";
 
-interface CardProps {
-  verse: string;
-  letters: string;
-  verseLabel: string;
-}
-
-const Card = ({ verse, letters, verseLabel }: CardProps) => {
+const Card = ({ verse, letters, verseLabel }) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   const toggleAnswer = () => {
@@ -23,12 +18,9 @@ const Card = ({ verse, letters, verseLabel }: CardProps) => {
         <span className="pb-5 text-center grow">
           {showAnswer ? verse : letters}
         </span>
-        <button
-          onClick={() => toggleAnswer()}
-          className="self-end p-2 text-white bg-blue-700 rounded text-bold"
-        >
+        <Button onClick={() => toggleAnswer()}>
           {showAnswer ? "Hide Answer" : "Show Answer"}{" "}
-        </button>
+        </Button>
       </div>
     </article>
   );
